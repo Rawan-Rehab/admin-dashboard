@@ -1,9 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
+
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
-
 import "./style.css";
 import RequireAuth from "./pages/Website/Auth/RequireAuth.js";
 import "./pages/Dashboard/dashboard.css";
@@ -35,14 +34,14 @@ function App() {
           <Route element={<RequireAuth />}>
             <Route path="/Dashboard" element={<Dashboard />}>
               <Route path="users" element={<Users />} />
-              <Route path="user/create" element={<CreateUser />} />
+              <Route path="user/create" element={<CreateUser/>} />
               <Route path="users/:id" element={<Updateuser />} />
               <Route path="products" element={<Products />} />
               <Route path="product/create" element={<CreateProduct />} />
               <Route path="products/:id" element={<UpdateProduct />} />
             </Route>
-            {/* </Route> */}
-          </Route>
+            </Route>
+          {/* </Route> */}
         </Routes>
       </Userprovider>
     </div>

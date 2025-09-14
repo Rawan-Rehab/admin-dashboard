@@ -6,7 +6,6 @@ import "./index.css";
 import { User } from "../../pages/Website/context/context";
 import { useNavigate } from "react-router-dom";
 import Cookies from 'universal-cookie';
-
 export default function Form(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,7 +38,7 @@ const form = {
 
   async function submit(e) {
     e.preventDefault();
-    setAccept(true); // تنشيط قبول المدخلات
+    setAccept(true); 
 
     try {
       let res = await axios.post(
@@ -59,7 +58,7 @@ const form = {
         const userDetails = res.data.data.user;
         
         ner.setauth({ token, userDetails });
-        nav(props.navigate); // توجيه المستخدم إلى الصفحة المحددة
+        nav(props.navigate);
       }
     } catch (err) {
       if (err.response && err.response.status === 422) {
