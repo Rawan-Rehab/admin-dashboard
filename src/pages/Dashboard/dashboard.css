@@ -1,0 +1,56 @@
+/* global*/
+.content-flex{
+    display: flex;
+}
+
+/* top bar   */
+
+/* side bar */
+.side-bar{
+    padding: 10px;
+    border-right: 1px solid  rgb(204, 192, 192);
+    width:20%;
+    height: 100vh;
+}
+.item-link{
+    /* position: relative;
+    right:110px; */
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    padding: 10px;
+}
+.item-link:hover{
+    background-color:  rgb(106, 129, 151); 
+    border-radius: 12px;
+}
+.active{
+    background-color: rgb(144, 164, 183); 
+    border-radius: 12px;
+}
+/*table*/
+ table{
+    border-collapse: collapse;
+   width: 100%;
+    table-layout: fixed;
+}
+tr:nth-child(even){
+    background-color: azure;
+} 
+th,
+td{
+    border: 1px solid rgb(133, 54, 54);
+    padding: .75rem;
+    text-align: center;
+}
+th{
+    background:  rgb(152, 187, 204);
+}
+td{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
